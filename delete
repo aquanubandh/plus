@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Your Aquanubandh Plus Account</title>
+  <meta name="description" content="Request deletion of your Aquanubandh Plus account and associated data.">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f6f8fb;
+      color: #172033;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      width: 100%;
+      max-width: 560px;
+      background: #fff;
+      border: 1px solid #e1e6ef;
+      border-radius: 16px;
+      padding: 36px;
+      box-shadow: 0 8px 30px rgba(20, 35, 60, .08);
+    }
+    .brand {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0 0 12px;
+    }
+    p {
+      line-height: 1.6;
+      color: #536074;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin: 22px 0 8px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #ccd4e0;
+      border-radius: 9px;
+      font-size: 16px;
+      outline: none;
+    }
+    input:focus, textarea:focus {
+      border-color: #315efb;
+      box-shadow: 0 0 0 3px rgba(49,94,251,.10);
+    }
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+    button {
+      width: 100%;
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 0;
+      border-radius: 9px;
+      background: #315efb;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button:hover { background: #254bd0; }
+    .note {
+      font-size: 13px;
+      margin-top: 18px;
+      color: #697589;
+    }
+    .success {
+      display: none;
+      padding: 18px;
+      border-radius: 10px;
+      background: #eefaf2;
+      border: 1px solid #b9e3c7;
+      color: #185c31;
+      line-height: 1.5;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="brand">Aquanubandh Plus</div>
+    <h1>Request Account Deletion</h1>
+
+    <p>
+      Use this page to request deletion of your Aquanubandh Plus account
+      and associated personal data.
+    </p>
+
+    <form id="deleteForm"
+          action="https://formsubmit.co/aquanubandh@gmail.com"
+          method="POST">
+
+      <input type="hidden" name="_subject" value="Aquanubandh Plus - Account Deletion Request">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <!-- Return to this same GitHub Pages URL after the request is submitted.
+           Replace YOUR-USERNAME/YOUR-REPO with your actual GitHub Pages address. -->
+      <input type="hidden" name="_next"
+             value="https://YOUR-USERNAME.github.io/YOUR-REPO/delete-account.html?submitted=1">
+
+      <label for="email">Account email address</label>
+      <input id="email" name="Account Email" type="email"
+             placeholder="you@example.com" required>
+
+      <label for="reason">Additional information (optional)</label>
+      <textarea id="reason" name="Additional Information"
+                placeholder="Anything that may help us identify your account..."></textarea>
+
+      <button type="submit">Request Account Deletion</button>
+    </form>
+
+    <div id="success" class="success">
+      <strong>Request successfully sent.</strong><br>
+      Your account deletion request has been received. We will review the
+      request and process the deletion of the account and associated data.
+    </div>
+
+    <p class="note">
+      Please submit the request using the email address associated with your
+      Aquanubandh Plus account. Certain information may be retained where
+      required for legitimate legal, security, fraud-prevention, or regulatory
+      reasons, as described in our privacy policy.
+    </p>
+  </main>
+
+  <script>
+    if (new URLSearchParams(window.location.search).get("submitted") === "1") {
+      document.getElementById("deleteForm").style.display = "none";
+      document.getElementById("success").style.display = "block";
+    }
+  </script>
+</body>
+</html>
